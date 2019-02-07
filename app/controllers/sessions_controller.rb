@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def create
     resp = Faraday.get("https://foursquare.com/oauth2/access_token") do |req|
-      req.params['client_id'] = ENV['FOURSQUARE_CLIENT_ID']
+      req.params['client_id'] = 'W3ZNT3VH1FWIA21O4JRG204J1DMHOABWPDHLAUXD5XFVV23W'
       req.params['client_secret'] = ENV['FOURSQUARE_SECRET']
       req.params['grant_type'] = 'authorization_code'
       req.params['redirect_uri'] = "http://localhost:3000/auth"
